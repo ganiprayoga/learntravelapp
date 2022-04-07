@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card-title {
+    @apply mt-0 mb-0 lg:mt-0 lg:mb-0;
+}
+
+i.fa-duotone {
+    font-style: normal;
+    --fa-primary-opacity: 1.0;
+    --fa-secondary-opacity: 1.0;
+}
