@@ -4,7 +4,7 @@
     <div class="bg-base-200 p-4 md:p-0">
       <div class="container mx-auto py-8">
         <h1 class="text-3xl font-bold">Our favorite experiences worldwide</h1>
-        <SectionCatalogGrid :tours="[0,1,2,3]" class="py-8"/>
+        <SectionCatalogGrid class="py-8"/>
       </div>
     </div>
   </div>

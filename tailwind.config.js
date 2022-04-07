@@ -1,5 +1,13 @@
 module.exports = {
     content: ['./{pages,components,layouts,plugins}/**/*.{vue,js,ts}'],
+    theme: {
+        extend: {
+            aspectRatio: {
+                '2/1': '2 / 1',
+                '3/1': '3 / 1',
+            },
+        }
+    },
     daisyui: {
         themes: [{
             mytheme: {
@@ -13,7 +21,10 @@ module.exports = {
                 "warning": "#FBBD23",
                 "error": "#F87272",
             },
-        },],
+        }],
     },
-    plugins: [require('daisyui')],
+    plugins: [
+        require('daisyui'),
+        require('@tailwindcss/typography')
+    ],
 }

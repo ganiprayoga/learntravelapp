@@ -17,7 +17,18 @@ export default defineNuxtConfig({
         },
     },
     css: [
-        '@/assets/fontawesome/css/duotone.css',
+        '@/assets/fontawesome/css/all.min.css',
         '@/assets/css/app.css'
-    ]
+    ],
+    svg: {
+        vueSvgLoader: {
+            // vue-svg-loader options
+        },
+        svgSpriteLoader: {
+            // svg-sprite-loader options
+        },
+        fileLoader: {
+            // file-loader options
+        }
+    }
 })

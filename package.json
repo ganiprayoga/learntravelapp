@@ -9,7 +9,9 @@
     "@headlessui/vue": "^1.5.0",
     "@nuxtjs/svg": "^0.4.0",
     "@nuxtjs/tailwindcss": "^5.0.2",
-    "nuxt3": "latest"
+    "@tailwindcss/typography": "^0.5.2",
+    "nuxt3": "latest",
+    "sass": "^1.49.11"
   },
   "dependencies": {
     "@heroicons/vue": "^1.0.6",

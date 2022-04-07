@@ -1,6 +1,5 @@
 <template>
-  <span class="fad" :class="'fa-' + props.icon"
-        :style="'--fa-primary-color:' + props.primaryColour + '; --fa-secondary-color:' + props.secondaryColour + ';'"></span>
+  <span class="fa-regular" :class="'fa-' + props.icon"></span>
 </template>
 
 <script setup lang="ts">
@@ -9,12 +8,12 @@ const props = defineProps({
   primaryColour: {
     type: String,
     required: false,
-    default: 'dodgerblue'
+    default: '#E0A82E'
   },
   secondaryColour: {
     type: String,
     required: false,
-    default: 'gold'
+    default: '#F9D72F'
   }
 })
 </script>
