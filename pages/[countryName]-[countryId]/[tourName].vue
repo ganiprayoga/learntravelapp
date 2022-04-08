@@ -22,8 +22,9 @@
       <div class="flex-initial w-full md:w-2/3 ">
         <article class="prose-sm lg:prose-lg ">
           <p>{{ tour.tourShortDesc }}</p>
-          <div class="divider"></div>
         </article>
+        <div class="divider"></div>
+        <h2 class="font-medium text-xl mb-4">Itinerary</h2>
         <SectionDetailItinerary :itinerary="tour.tourItinerary"/>
       </div>
 
@@ -63,7 +64,7 @@ const tour = {
     {
       title: "Day 1",
       subTitle: "Kelor Island - Menjerite - Rinca - Kalong Kinca",
-      itinirary: [
+      itinerary: [
         {
           timeStart: "08:00",
           timeEnd: "10:00",
@@ -89,7 +90,7 @@ const tour = {
     {
       title: "Day 2",
       subTitle: "Padar Island - Pink Beach - Manta Point - Taka Makassar - Sebayur Island",
-      itinirary: [
+      itinerary: [
         {
           timeStart: "05:00",
           timeEnd: "06:00",

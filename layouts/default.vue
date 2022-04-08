@@ -1,6 +1,7 @@
 <template>
   <div>
     <AppsNavbar/>
+
     <slot></slot>
   </div>
 </template>

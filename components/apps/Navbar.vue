@@ -154,7 +154,7 @@ import {ChevronDownIcon} from '@heroicons/vue/solid'
 const features = [
   {
     name: 'My Bookings',
-    href: '#',
+    href: '/customer-bookings/',
     // description: 'Get a better understanding of where your traffic is coming from.',
     icon: BookOpenIcon,
   },
