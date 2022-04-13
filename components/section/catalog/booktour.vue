@@ -56,7 +56,7 @@ const applications = [
     dateFull: 'January 7, 2020',
     status: 'warning',
     stage: 'Please complete your Requirement Checklist',
-    href: '#',
+    href: '/customer-bookings/trip/123884',
   },
   {
     applicant: {
