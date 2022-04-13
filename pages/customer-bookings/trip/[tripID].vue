@@ -24,23 +24,28 @@
         </div>
       </div>
 
-      <div class="bg-white shadow overflow-hidden rounded-lg my-4">
-        <div class="px-4 py-5 sm:px-6">
+      <div tabindex="0" class="bg-white collapse shadow overflow-hidden rounded-lg my-4">
+        <input type="checkbox" class="peer">
+        <div class="collapse-title px-4 py-5 sm:px-6">
           <h3 class="text-lg leading-6 font-medium text-gray-900">Requirement Checklist</h3>
-          <p class="mt-1 max-w-2xl text-sm text-warning">Some items need to be confirmed.</p>
+          <p class="mt-1 max-w-2xl text-sm text-warning">Some items need to be confirmed. <i class="far fa-chevron-down"></i></p>
         </div>
-        <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
-          <div tabindex="0" class="collapse">
-            <input type="checkbox" class="peer">
-            <div class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-              Click me to show/hide content
-            </div>
-            <div class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-              <p>tabindex="0" attribute is necessary to make the div focusable</p>
-            </div>
+        <div class="collapse-content border-t border-gray-200">
+          <div class=" px-4 py-5 sm:px-6">
+            <ElementCheckbox></ElementCheckbox>
           </div>
         </div>
       </div>
+
+<!--      <div tabindex="0" class="collapse">-->
+<!--        <input type="checkbox" class="peer">-->
+<!--        <div class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">-->
+<!--          Click me to show/hide content-->
+<!--        </div>-->
+<!--        <div class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">-->
+<!--          <p>tabindex="0" attribute is necessary to make the div focusable</p>-->
+<!--        </div>-->
+<!--      </div>-->
 
       <ElementContactCard class="my-4" :person="tour.tourLeader"/>
 
