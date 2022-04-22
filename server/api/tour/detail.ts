@@ -10,12 +10,14 @@ export default () => ({
   tourPrice: 6867000,
   tourRating: 4.4,
   tourReviewNumber: 43,
+  tourDurationDay: 3,
+  tourDurationNight: 2,
   bookingDetail: {
     bookingPax: {
       adult: 3,
       children: 1
     },
-    tourDate: '2022-04-04'
+    tourDate: '06 Jun 2022 - 08 Jun 2022'
   },
   tourLeader: {
     name: 'Jackson Suhendar',
@@ -54,65 +56,104 @@ export default () => ({
       "Life jacket",
       "Documentation set (gopro, mirrorless /dslr, drone)",
     ],
+    tourNotInclude:[
+      "Flight tickets to and from the meeting point",
+      "Individual needs",
+      "Rinca/Komodo Island Entrance Ticket",
+      "Crew Tips"
+    ],
+    tourContent:`
+    <div class="tab-editor-container ywtm_content_tab"> <p style="text-align: center;"><strong>KAPAL PHINISI</strong></p>
+<p><img src="https://cdn.getyourguide.com/img/tour/5cbec1be8aac4.jpeg/145.jpg"></p>
+<p><img src="https://open-trip.id/wp-content/uploads/2021/12/Phinisi-Kapal-SIP-Phinisi.png" alt="" width="800" height="426"></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><strong>Interior Share Cabin</strong></p>
+<p><img src="https://open-trip.id/wp-content/uploads/2021/12/Kapal-SIP-Phinisi.png" alt="" width="800" height="600" ></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><strong>Interior Private Cabin</strong></p>
+<p><img src="https://open-trip.id/wp-content/uploads/2021/12/Kapal-SIP-Phinisi-Kamar-Private.png" alt="" width="800" height="600" ></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><strong>Ekterior Kapal Phinisi S.I.P</strong></p>
+<p><img src="https://open-trip.id/wp-content/uploads/2021/12/Kapal-SIP-Phinisi-interio-2.png" alt="" width="800" height="1067" ></p>
+<p>&nbsp;</p>
+<p><img loading="lazy" class="aligncentersize-full" src="https://open-trip.id/wp-content/uploads/2021/12/Kapal-SIP-Phinisi-interior.png" alt="" width="800" height="1067"></p>
+<p>&nbsp;</p>
+<p><img src="https://open-trip.id/wp-content/uploads/2021/12/Kapal-SIP-Phinisi-Kamar-mandi.png" alt="" width="800" height="1067"></p>
+</div>
+    `
   },
   tourShortDesc: "Look for Komodo Dragons and other wildlife on a private 2-day tour of the Komodo islands. Go for a jungle trek in the habitat of the giant lizards, discover a beach of amazing pink sand and spend the night on a boat.",
   tourItinerary: [
     {
-      title: "Day 1",
+      title: "Day 1 • 06 Jun 2022",
       subTitle: "Kelor Island - Menjerite - Rinca - Kalong Kinca",
       itinerary: [
         {
           timeStart: "08:00",
           timeEnd: "10:00",
           description: "Pick up from Hotel or Airport",
-          detail: {
-            title: 'Pick up Information',
-            content: `
-                <h4>Vehicle</h4>
-                <p>Type: <strong>Toyota Alphard Black</strong><br />License Plate: <strong>EB 4729 DH</strong></p>
-                <h4>Contact person</h4>
-                <p><strong>Peter Parker</strong><br />Driver</p>
-                <p>08111111111</p>
-                <p><a class="btn bg-base-100 border text-base-content m-2" href="#">WA</a> <a class="btn bg-base-100 border text-base-content m-2" href="#">CALL</a></p>
-`
-          }
+          icon: "plane-arrival",
+          detailID: 1
         },
         {
           timeStart: "10:00",
           timeEnd: "10:30",
           description: "Sailing to Kelor Island",
-          detail: {
-            title: 'Sailing Trivia',
-            content: `
-                <p>It's will be great if you wear sunglasses and a hat.</p>
-                `
-          }
+          icon: "sailboat",
+          detailID: 2
         },
         {
           timeStart: "10:30",
           timeEnd: "12:00",
-          description: "Arriving at Kelor Island",
-          detail: {
-            title: 'Great place to do',
-            content: `
-                <ul>
-                <li>Trekking to Kelor Island Hill</li>
-                <li>Snorkeling</li>
-                <li>Beach volleyball</li>
-                <li>Bring back your rubbish and leftover.</li>
-</ul>
-                `
-          }
+          description: "Activity at Kelor Island",
+          icon: "camera"
         },
         {
           timeStart: "12:00",
           timeEnd: "13:00",
-          description: "Lunch while sailing to Menjerite"
+          description: "Lunch while sailing to Menjerite",
+          icon: "pot-food"
+        },
+        {
+          timeStart: "13:00",
+          timeEnd: "16:00",
+          description: "Sail to Rinca Komodo Island",
+          icon: "sailboat"
+        },
+        {
+          timeStart: "16:00",
+          timeEnd: "17:00",
+          description: "At Rinca Island, Trekking to see Komodo Dragons",
+          icon: "person-hiking"
+        },
+        {
+          timeStart: "17:00",
+          timeEnd: "18:00",
+          description: "Heading to Kalong Rinca Island",
+          icon: "sailboat"
+        },
+        {
+          timeStart: "18:00",
+          timeEnd: "19:00",
+          description: "Arriving at Kalong Island while enjoying sunset",
+          icon: "sunset"
+        },
+        {
+          timeStart: "19:00",
+          timeEnd: "20:00",
+          description: "Dinner followed by free time",
+          icon: "pot-food"
+        },
+        {
+          timeStart: "20:00",
+          timeEnd: "drop",
+          description: "Shower, Rest, and Free Time",
+          icon: "snooze"
         }
       ]
     },
     {
-      title: "Day 2",
+      title: "Day 2 • 07 Jun 2022",
       subTitle: "Padar Island - Pink Beach - Manta Point - Taka Makassar - Sebayur Island",
       itinerary: [
         {

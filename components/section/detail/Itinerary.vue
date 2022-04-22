@@ -32,6 +32,7 @@
         </li>
         <!--        <pre>Length: {{ activityItem.itinerary.length }}</pre>-->
         <template v-if="activityItem.itinerary !== null">
+          <div>
           <li v-for="(schedule, scheduleIdx) in activityItem.itinerary" :key="scheduleIdx">
             <div class="relative pb-8">
             <span v-if="scheduleIdx !== activityItem.itinerary.length - 1 || activityItemIdx !== itinerary.length - 1"
@@ -40,7 +41,7 @@
                 <div>
                   <div class="relative px-1">
                     <div class="h-8 w-8 bg-gray-100 rounded-full ring-8 ring-white flex items-center justify-center">
-                      <i class="far fa-clock"></i>
+                      <i class="far" :class="( schedule.icon ) ? 'fa-' + schedule.icon : `fa-clock`"></i>
                     </div>
                   </div>
                 </div>
@@ -52,59 +53,16 @@
                     </span>
                     <p class="">{{ schedule.description }}</p>
                   </div>
-                  <template v-if="schedule.detail" :set="open[scheduleIdx] = false">
-                    <button class="btn btn-xs btn-primary mt-4 flex-initial shrink" @click="open[scheduleIdx] = true">
+                  <template v-if="schedule.detailID && detailed">
+                    <NuxtLink :to="`/customer-bookings/itinerary-${$route.params.tripID}/${schedule.detailID}`" class="btn btn-xs btn-primary mt-4 flex-initial shrink">
                       Detail
-                    </button>
-                    <div :class="(open[scheduleIdx]) ? `` : `hidden`" class="fixed z-10 inset-0 overflow-y-auto"
-                         aria-labelledby="modal-title" role="dialog" aria-modal="true">
-                      <div
-                          class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-
-                        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
-                             aria-hidden="true"></div>
-
-                        <!-- This element is to trick the browser into centering the modal contents. -->
-                        <span class="hidden sm:inline-block sm:align-middle sm:h-screen"
-                              aria-hidden="true">&#8203;</span>
-
-                        <!--
-                          Modal panel, show/hide based on modal state.
-
-                          Entering: "ease-out duration-300"
-                            From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                            To: "opacity-100 translate-y-0 sm:scale-100"
-                          Leaving: "ease-in duration-200"
-                            From: "opacity-100 translate-y-0 sm:scale-100"
-                            To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                        -->
-                        <div
-                            class="relative inline-block w-full align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
-                          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                            <div class="sm:flex sm:items-start">
-                              <div class="mt-3 sm:mt-0 sm:ml-4 sm:text-left">
-                                <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
-                                  {{ schedule.detail.title }}</h3>
-                                <div class="mt-2 prose-sm lg:prose-lg">
-                                  <div class="divider w-full"></div>
-                                  <div v-html="schedule.detail.content"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                            <button type="button" class="btn btn-base-100 btn-block" @click="open[scheduleIdx] = false">
-                              Close
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    </NuxtLink>
                   </template>
                 </div>
               </div>
             </div>
           </li>
+          </div>
         </template>
       </template>
     </ul>
@@ -117,6 +75,11 @@ import {ref} from "vue";
 const open = ref([])
 
 const props = defineProps({
-  itinerary: Object
+  itinerary: Object,
+  detailed:{
+    type: Boolean,
+    default: true,
+    required: false
+  }
 })
 </script>

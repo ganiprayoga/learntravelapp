@@ -2,6 +2,7 @@
   <div class="container mx-auto">
     <div class="p-4">
       <SectionDetailPagetitle :title-props="titleProps" class="my-4"/>
+      <!--      BOOKING OVERVIEW-->
       <div class="bg-white shadow overflow-hidden rounded-lg my-4">
         <div class="px-4 py-5 sm:px-6">
           <h3 class="text-lg leading-6 font-medium text-gray-900">Booking Overview</h3>
@@ -28,7 +29,8 @@
         <input type="checkbox" class="peer">
         <div class="collapse-title px-4 py-5 sm:px-6">
           <h3 class="text-lg leading-6 font-medium text-gray-900">Requirement Checklist</h3>
-          <p class="mt-1 max-w-2xl text-sm text-warning">Some items need to be confirmed. <i class="far fa-chevron-down"></i></p>
+          <p class="mt-1 max-w-2xl text-sm text-warning">Some items need to be confirmed. <i
+              class="far fa-chevron-down"></i></p>
         </div>
         <div class="collapse-content border-t border-gray-200">
           <div class=" px-4 py-5 sm:px-6">
@@ -37,18 +39,18 @@
         </div>
       </div>
 
-<!--      <div tabindex="0" class="collapse">-->
-<!--        <input type="checkbox" class="peer">-->
-<!--        <div class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">-->
-<!--          Click me to show/hide content-->
-<!--        </div>-->
-<!--        <div class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">-->
-<!--          <p>tabindex="0" attribute is necessary to make the div focusable</p>-->
-<!--        </div>-->
-<!--      </div>-->
+      <!--      <div tabindex="0" class="collapse">-->
+      <!--        <input type="checkbox" class="peer">-->
+      <!--        <div class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">-->
+      <!--          Click me to show/hide content-->
+      <!--        </div>-->
+      <!--        <div class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">-->
+      <!--          <p>tabindex="0" attribute is necessary to make the div focusable</p>-->
+      <!--        </div>-->
+      <!--      </div>-->
 
       <ElementContactCard class="my-4" :person="tour.tourLeader"/>
-
+<!--ITINERARY-->
       <div class="bg-white shadow overflow-hidden rounded-lg my-4">
         <div class="px-4 py-5 sm:px-6">
           <h3 class="text-lg leading-6 font-medium text-gray-900">Itinerary</h3>
@@ -62,6 +64,7 @@
           </dl>
         </div>
       </div>
+      <!--TOUR GALLERY-->
       <div class="bg-white shadow overflow-hidden rounded-lg my-4">
         <div class="px-4 py-5 sm:px-6">
           <h3 class="text-lg leading-6 font-medium text-gray-900">Tour Gallery</h3>
@@ -75,8 +78,19 @@
           </dl>
         </div>
       </div>
+      <!--    BOOKING RATING-->
+      <div class="bg-white shadow overflow-hidden rounded-lg my-4">
+        <div class="px-4 py-5 sm:px-6">
+          <h3 class="text-lg leading-6 font-medium text-gray-900">Rating and Feedback</h3>
+          <!--          <p class="mt-1 max-w-2xl text-sm text-gray-500">Personal details and application.</p>-->
+        </div>
+        <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
+          <ElementRating></ElementRating>
+        </div>
+      </div>
     </div>
-    <!--BOOKING OVERVIEW-->
+
+
   </div>
 </template>
 
@@ -106,5 +120,4 @@ const titleProps = {
   backURI: '/customer-bookings/'
 };
 //
-// console.log('tour', data)
 </script>

@@ -24,8 +24,28 @@
           <p>{{ tour.tourShortDesc }}</p>
         </article>
         <div class="divider"></div>
+        <!--        Facilities-->
+        <h2 class="font-medium text-xl mb-4">Place to Visit</h2>
+        <ElementFancyList :list="tour.tourDetail.tourPlaces"></ElementFancyList>
+        <div class="divider"></div>
+        <!--        Place to Visit-->
+        <h2 class="font-medium text-xl mb-4">Facilities</h2>
+        <ElementFancyList :list="tour.tourDetail.tourFacility"></ElementFancyList>
+        <div class="divider"></div>
+
+        <!--Tour Not Include-->
+        <h2 class="font-medium text-xl mb-4">Tour Not Include</h2>
+        <ElementFancyList :list="tour.tourDetail.tourNotInclude"></ElementFancyList>
+        <div class="divider"></div>
+
+        <!--        ITINERARY-->
         <h2 class="font-medium text-xl mb-4">Itinerary</h2>
-        <SectionDetailItinerary :itinerary="tour.tourItinerary"/>
+        <SectionDetailItinerary :itinerary="tour.tourItinerary" :detailed="false"/>
+        <div class="divider"></div>
+
+        <!--MORE TOUR DETAIL-->
+        <h2 class="font-medium text-xl mb-4">More Tour Detail</h2>
+        <div v-html="tour.tourDetail.tourContent"></div>
       </div>
 
       <div class="w-full md:w-1/3 ">
@@ -47,72 +67,8 @@
 </template>
 
 <script setup lang="ts">
-const tour = {
-  tourURI: "komodo-island-2-day-tour",
-  tourName: "Komodo Islands: Private 2-Day Tour with Phinisi Boat Stay",
-  tourImage: [
-    "https://cdn.getyourguide.com/img/tour/5a438bd7837b4.jpeg/98.jpg",
-    "https://cdn.getyourguide.com/img/tour/5cbec1398147a.jpeg/145.jpg",
-    "https://cdn.getyourguide.com/img/tour/5cbec3d9404be.jpeg/145.jpg",
-    "https://cdn.getyourguide.com/img/tour/5a438b9d3ac88.jpeg/145.jpg"
-  ],
-  tourPrice: 6867000,
-  tourRating: 4.4,
-  tourReviewNumber: 43,
-  tourShortDesc: "Look for Komodo Dragons and other wildlife on a private 2-day tour of the Komodo islands. Go for a jungle trek in the habitat of the giant lizards, discover a beach of amazing pink sand and spend the night on a boat.",
-  tourItinerary: [
-    {
-      title: "Day 1",
-      subTitle: "Kelor Island - Menjerite - Rinca - Kalong Kinca",
-      itinerary: [
-        {
-          timeStart: "08:00",
-          timeEnd: "10:00",
-          description: "Pick up from Hotel or Airport"
-        },
-        {
-          timeStart: "10:00",
-          timeEnd: "10:30",
-          description: "Sailing to Kelor Island"
-        },
-        {
-          timeStart: "10:30",
-          timeEnd: "12:00",
-          description: "Arriving at Kelor Island"
-        },
-        {
-          timeStart: "12:00",
-          timeEnd: "13:00",
-          description: "Lunch while sailing to Menjerite"
-        },
-      ]
-    },
-    {
-      title: "Day 2",
-      subTitle: "Padar Island - Pink Beach - Manta Point - Taka Makassar - Sebayur Island",
-      itinerary: [
-        {
-          timeStart: "05:00",
-          timeEnd: "06:00",
-          description: "Preparing for Sunrise Trekking in Padar Island"
-        },
-        {
-          timeStart: "06:00",
-          timeEnd: "08:00",
-          description: "Activity in Padar Island"
-        },
-        {
-          timeStart: "08:00",
-          timeEnd: "09:00",
-          description: "Breakfast"
-        },
-        {
-          timeStart: "09:00",
-          timeEnd: "11:00",
-          description: "Sailing to Pink Beach"
-        },
-      ]
-    }
-  ]
-}
+import {useFetch} from "#app";
+
+const {data} = await useFetch('/api/tour/detail');
+const tour = await data;
 </script>
