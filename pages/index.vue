@@ -1,6 +1,6 @@
 <template>
   <div>
-    <MarketingSectionsHerosSplit_with_navbar/>
+    <ElementCarousel />
     <div class="bg-base-200 p-4 md:p-0">
       <div class="container mx-auto py-8">
         <h1 class="text-3xl font-bold">Our favorite experiences worldwide</h1>
