@@ -1,0 +1,68 @@
+{
+  tourURI: "komodo-island-2-day-tour",
+  tourName: "Komodo Islands: Private 2-Day Tour with Phinisi Boat Stay",
+  tourImage: [
+    "https://cdn.getyourguide.com/img/tour/5a438bd7837b4.jpeg/98.jpg",
+    "https://cdn.getyourguide.com/img/tour/5cbec1398147a.jpeg/145.jpg",
+    "https://cdn.getyourguide.com/img/tour/5cbec3d9404be.jpeg/145.jpg",
+    "https://cdn.getyourguide.com/img/tour/5a438b9d3ac88.jpeg/145.jpg"
+  ],
+  tourPrice: 6867000,
+  tourRating: 4.4,
+  tourReviewNumber: 43,
+  tourShortDesc: "Look for Komodo Dragons and other wildlife on a private 2-day tour of the Komodo islands. Go for a jungle trek in the habitat of the giant lizards, discover a beach of amazing pink sand and spend the night on a boat.",
+  tourItinerary: [
+    {
+      title: "Day 1",
+      subTitle: "Kelor Island - Menjerite - Rinca - Kalong Kinca",
+      itinerary: [
+        {
+          timeStart: "08:00",
+          timeEnd: "10:00",
+          description: "Pick up from Hotel or Airport"
+        },
+        {
+          timeStart: "10:00",
+          timeEnd: "10:30",
+          description: "Sailing to Kelor Island"
+        },
+        {
+          timeStart: "10:30",
+          timeEnd: "12:00",
+          description: "Arriving at Kelor Island"
+        },
+        {
+          timeStart: "12:00",
+          timeEnd: "13:00",
+          description: "Lunch while sailing to Menjerite"
+        }
+      ]
+    },
+    {
+      title: "Day 2",
+      subTitle: "Padar Island - Pink Beach - Manta Point - Taka Makassar - Sebayur Island",
+      itinerary: [
+        {
+          timeStart: "05:00",
+          timeEnd: "06:00",
+          description: "Preparing for Sunrise Trekking in Padar Island"
+        },
+        {
+          timeStart: "06:00",
+          timeEnd: "08:00",
+          description: "Activity in Padar Island"
+        },
+        {
+          timeStart: "08:00",
+          timeEnd: "09:00",
+          description: "Breakfast"
+        },
+        {
+          timeStart: "09:00",
+          timeEnd: "11:00",
+          description: "Sailing to Pink Beach"
+        }
+      ]
+    }
+  ]
+}
