@@ -17,7 +17,8 @@ export default defineNuxtConfig({
         },
         transpile: [
           '@heroicons/vue',
-          '@headlessui/vue'
+          '@headlessui/vue',
+          'daisyui',
         ],
     },
     css: [

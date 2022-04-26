@@ -6,7 +6,7 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "@headlessui/vue": "^0.0.0-insiders.97c0ca2",
+    "@headlessui/vue": "^1.6.0",
     "@nuxtjs/svg": "^0.4.0",
     "@nuxtjs/tailwindcss": "^5.0.2",
     "@tailwindcss/typography": "^0.5.2",
