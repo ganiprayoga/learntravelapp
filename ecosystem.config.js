@@ -2,7 +2,7 @@ module.exports = {
     apps : [{
         name      : 'yarn',
         script    : 'yarn',
-        args      : 'start',
+        args      : 'dev',
         interpreter: '/bin/bash',
         env: {
             NODE_ENV: 'development'
