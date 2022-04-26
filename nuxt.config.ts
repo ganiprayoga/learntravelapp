@@ -15,6 +15,10 @@ export default defineNuxtConfig({
                 },
             },
         },
+        transpile: [
+          '@heroicons/vue',
+          '@headlessui/vue'
+        ],
     },
     css: [
         '@/assets/fontawesome/css/all.min.css',
