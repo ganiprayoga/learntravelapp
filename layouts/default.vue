@@ -1,6 +1,6 @@
 <template>
   <div class="bg-base-100">
-    <AppsNavbar/>
+    <AppsNav/>
 
     <slot></slot>
   </div>

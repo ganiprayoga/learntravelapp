@@ -1,11 +1,10 @@
 module.exports = {
-    apps : [{
-        name      : 'yarn',
-        script    : 'yarn',
-        args      : 'dev',
-        interpreter: '/bin/bash',
-        env: {
-            NODE_ENV: 'development'
+    apps: [
+        {
+            name: 'TravelApps',
+            exec_mode: 'cluster',
+            instances: 'max',
+            script: './.output/server/index.mjs'
         }
-    }]
+    ]
 };
